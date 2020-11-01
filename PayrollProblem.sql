@@ -1,4 +1,4 @@
-/* UC 4 :
+/* UC 6 :
 Retrive data from the table with a given condition*/
 use payroll_service;
 /* Creating a table */
@@ -18,3 +18,7 @@ select * from employee_payroll;
 select Salary from employee_payroll where EmpName='Kartikeya';
 /*Retrieving data with a given condition*/
 select * from employee_payroll where StartDate between cast('2020-01-01' as date) and cast(getdate() as date);
+/*Add new column to table of gender*/
+alter table employee_payroll add Gender char(1);
+/*Update table*/
+update employee_payroll set Gender='M' where EmpName ='Kartikeya' or EmpName ='Morgan';
