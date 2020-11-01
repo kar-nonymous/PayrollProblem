@@ -1,5 +1,5 @@
 /* UC 4 :
-Retrive data from the table */
+Retrive data from the table with a given condition*/
 use payroll_service;
 /* Creating a table */
 create table employee_payroll
@@ -14,3 +14,7 @@ insert into employee_payroll(EmpName,Salary,StartDate) values
 ('Morgan',180000,'2020-10-26');
 /*Retreiving data from table*/
 select * from employee_payroll;
+/*Retrieving data with a given condition*/
+select Salary from employee_payroll where EmpName='Kartikeya';
+/*Retrieving data with a given condition*/
+select * from employee_payroll where StartDate between cast('2020-01-01' as date) and cast(getdate() as date);
