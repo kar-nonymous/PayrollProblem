@@ -1,5 +1,5 @@
-/* UC 3 :
-Insert data into the table */
+/* UC 4 :
+Retrive data from the table */
 use payroll_service;
 /* Creating a table */
 create table employee_payroll
@@ -12,3 +12,5 @@ StartDate date not null
 insert into employee_payroll(EmpName,Salary,StartDate) values
 ('Kartikeya',72000,'2020-09-18'),
 ('Morgan',180000,'2020-10-26');
+/*Retreiving data from table*/
+select * from employee_payroll;
